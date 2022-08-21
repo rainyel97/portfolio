@@ -66,7 +66,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
+  padding: 0px 16px;
   background-color: rgb(33, 37, 41);
 }
 
@@ -158,7 +158,7 @@ ul {
 /* About */
 
 #about {
-  background-image: url("img/aboutme.png");
+  background: url("img/aboutme.png") center/cover no-repeat;
 }
 .about__majors {
   display: flex;
@@ -172,8 +172,8 @@ ul {
   line-height: 170px;
   font-size: 70px;
   margin: auto;
-  color: var(--color-dark-grey);
-  border: 1px solid var(--color-dark-grey);
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
   border-radius: 50%;
   margin-bottom: 16px;
 }
@@ -319,7 +319,7 @@ ul {
   left: 0;
   opacity: 0;
   transform: translateY(10px);
-  transition: all var(--animation-duration) ease-in;
+  transition: all 300ms ease-in;
 }
 
 .project:hover .project__description {
@@ -345,13 +345,13 @@ ul {
 
 /* Contact */
 #contact {
-  background-image: url("img/contact.webp");
+  background: url("img/contact.webp") center/cover no-repeat;
 }
 
 .contact__title,
 .contact__email,
 .contact__rights {
-  color: var(--color-black);
+  color: deeppink;
 }
 .contact__email,
 .contact__rights {
@@ -381,6 +381,7 @@ ul {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    padding: 20px;
   }
 
   .navbar__menu {
