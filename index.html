@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -23,17 +23,16 @@
   <body>
     <nav id="navbar">
       <div class="navbar__logo">
-        <i class="fa-solid fa-book-open"></i>
-        <a href="#">Rainyel</a>
+        <img src="img/logo.png" alt="logo" width="35px" height="35px" />
+        <a>Rainyel</a>
       </div>
       <div class="navber__menu">
-        <ul>
-          <li class="navbar__menu active">Home</li>
-          <li class="navbar__menu">About</li>
-          <li class="navbar__menu">Skills</li>
-          <li class="navbar__menu">Work</li>
-          <li class="navbar__menu">Testimonials</li>
-          <li class="navbar__menu">Contact</li>
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item active">Home</li>
+          <li class="navbar__menu__item">About</li>
+          <li class="navbar__menu__item">Skills</li>
+          <li class="navbar__menu__item">Work</li>
+          <li class="navbar__menu__item">Contact</li>
         </ul>
         <button class="navbar__toggle-btn">
           <i class="fas fa-bars"></i>
@@ -52,13 +51,11 @@
         />
         <h1>Hello, <br />I'm Rainyel!</h1>
         <h2>Studying Front-end to be a cool Web developer</h2>
-        <button class="home__contact" style="background-color: aquamarine">
-          Contact Me
-        </button>
+        <h2>Let me introduce my Portfolio!</h2>
       </div>
     </section>
     <!-- about -->
-    <section id="about">
+    <section id="about" class="section">
       <h1>About Me</h1>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br />
@@ -68,37 +65,38 @@
       </p>
       <div class="about__majors">
         <div class="major">
-          <div class="icon">
+          <div class="major__icon">
             <i class="fa-brands fa-react"></i>
           </div>
-          <div class="major__name">REACT</div>
-          <div class="major__detail">
+          <div class="major__title">REACT</div>
+          <div class="major__description">
             Using Typescript, make web-app by React or Next.js
           </div>
         </div>
         <div class="major">
-          <div class="icon">
+          <div class="major__icon">
             <i class="fa-brands fa-js"></i>
           </div>
-          <div class="major__name">JAVASCRIPT</div>
-          <div class="major__detail">
+          <div class="major__title">JAVASCRIPT</div>
+          <div class="major__description">
             Using HTML, CSS, make vanilla JAVASCRIPT web-app
           </div>
         </div>
         <div class="major">
-          <div class="icon">
+          <div class="major__icon">
             <i class="fa-solid fa-hard-drive"></i>
           </div>
-          <div class="major__name">I will study Back-end someday...</div>
-          <div class="major__detail">
-            ex) JAVA, Node.js, RestAPIs, GraphGL...
+          <div class="major__title">Back-end</div>
+          <div class="major__description">
+            I will study Back-end someday... <br />ex) JAVA, Node.js, RestAPIs,
+            GraphGL...
           </div>
         </div>
       </div>
       <div class="about__jops">
         <div class="jop1">
           <img src="img/sejong.svg" alt="sejong" />
-          <p>Sejong-University senior</p>
+          <p>Sejong-University Senior now</p>
           <p>From 2016 March~</p>
         </div>
       </div>
@@ -195,21 +193,24 @@
       </div>
     </section>
     <!-- work -->
-    <section id="work">
+    <section id="work" class="section">
       <div class="section__container">
         <h1>My Works</h1>
         <h3>Projects</h3>
-        <div class="works__projects">
+        <div class="work__projects">
           <a
             href="https://github.com/rainyel97/rainyel97.github.io"
             target="_blank"
+            class="project"
           >
             <img
               src="img/chromeProject.jpeg"
               alt="chromeProject"
               class="project__img"
+              width="280px"
+              height="200px"
             />
-            <div class="project__discription">
+            <div class="project__description">
               <h3>Web Chrome App clone coding</h3>
               <span>Vanilla JAVASCRIPT</span>
             </div>
@@ -224,9 +225,8 @@
       <h1 class="contact__title">Wanna Contact?</h1>
       <h3 class="contact__email">olsoo9316@gmail.com</h3>
       <div class="contact__links">
-        <a href="https://github.com/rainyel97">
+        <a href="https://github.com/rainyel97" target="_blank">
           <i class="fa-brands fa-github"></i>
-          github
         </a>
       </div>
       <p class="contact__rights">2022 Rainyel - All rights reserved</p>
