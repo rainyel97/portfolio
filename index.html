@@ -11,6 +11,7 @@
       src="https://kit.fontawesome.com/11892434e8.js"
       crossorigin="anonymous"
     ></script>
+    <script src="main.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,13 +19,18 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="main.js"></script>
   </head>
   <body>
-    <nav id="navbar">
+    <nav id="navbar" class="">
       <div class="navbar__logo">
         <a>Rainyel</a>
-        <img src="img/logo.png" alt="logo" width="45px" height="45px" />
+        <img
+          src="img/logo.png"
+          alt="logo"
+          width="45px"
+          height="45px"
+          class="navbar__logo"
+        />
       </div>
       <div class="navber__menu">
         <ul class="navbar__menu">
@@ -35,7 +41,7 @@
           <li class="navbar__menu__item">Contact</li>
         </ul>
         <button class="navbar__toggle-btn">
-          <i class="fas fa-bars"></i>
+          <i class="fa-solid fa-circle-chevron-down"></i>
         </button>
       </div>
     </nav>
@@ -94,11 +100,12 @@
             </div>
           </div>
         </div>
-        <div class="about__jops">
-          <div class="jop1">
-            <img src="img/sejong.svg" alt="sejong" />
-            <p>Sejong-University Senior now</p>
-            <p>From 2016 March~</p>
+        <div class="about__jobs">
+          <div class="job">
+            <img src="img/sejong.svg" alt="sejong" class="job__image" />
+            <p class="job__name">
+              Sejong-University Senior now <br />From 2016.3~
+            </p>
           </div>
         </div>
       </div>

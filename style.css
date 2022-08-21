@@ -26,8 +26,18 @@
   --weight-bold: 700;
   --weight-semi-bold: 600;
   --weight-regular: 400;
-}
 
+  /* Border-radius */
+  --size-border-radius: 4px;
+  --size-border-radius-more: 10px;
+}
+/* Universal tags */
+* {
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
 /* Typography */
 body {
   margin: 0px;
@@ -63,21 +73,31 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 16px;
-  background-color: rgb(33, 37, 41);
+  padding: 16px 16px;
+  background-color: transparent;
+  transition: all 200ms ease-in-out;
 }
 
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  border-radius: var(--size-border-radius);
   color: white;
 }
 
 .navbar__menu {
   display: flex;
+}
+#navbar.navbar__colorize {
+  color: var(--color-white);
+  background-color: rgb(33, 37, 41);
+  padding: 16px 16px;
+  z-index: 1;
 }
 
 .navbar__menu__item {
@@ -100,22 +120,24 @@ p {
 
 .navbar__toggle-btn {
   position: absolute;
-  top: 24px;
+  top: 30px;
   right: 32px;
   font-size: 24px;
+  background: none;
+  border-style: none;
   color: var(--color-white);
   display: none;
 }
-ul {
-  list-style: none;
-}
+
 /* Home */
 #home {
   background: url("img/back.png") center/cover no-repeat;
   padding: 40px;
   text-align: center;
 }
-
+.home__container {
+  padding-top: 100px;
+}
 .home__avatar {
   width: 250px;
   height: 250px;
@@ -202,9 +224,11 @@ ul {
 
 .job {
   display: flex;
-  align-items: center;
+  align-items: left;
 }
-
+.job__image {
+  margin-right: 20px;
+}
 .job__description {
   margin: 0 16px;
   text-align: left;
@@ -212,15 +236,11 @@ ul {
 
 .job__name,
 .job__period {
-  color: var(--color-light-grey);
+  color: var(--color-black);
 }
 
 .job__name {
   font-size: var(--font-small);
-}
-
-.job__period {
-  font-size: var(--font-micro);
 }
 
 /* Skill */
@@ -284,6 +304,9 @@ ul {
   text-align: left;
 }
 /* Works */
+#work {
+  padding: 100px;
+}
 
 .work__projects {
   display: flex;
@@ -371,6 +394,28 @@ ul {
   transform: scale(1.1);
   color: var(--color-black);
 }
+/* arrowUp */
+.arrow-up {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  padding: 10px 14px;
+  background: none;
+  border: 2px solid #252424;
+  border-radius: 50%;
+  transition: all 200ms ease-in-out;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.arrow-up:hover {
+  background-color: darkgray;
+}
+
+.arrow-up.show {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
@@ -380,8 +425,8 @@ ul {
 
   #navbar {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
+    z-index: 1;
+    background-color: rgb(33, 37, 41);
   }
 
   .navbar__menu {
@@ -390,7 +435,9 @@ ul {
     width: 100%;
     display: none;
   }
-
+  .navbar__menu.open {
+    display: block;
+  }
   .about__majors {
     flex-direction: column;
   }
