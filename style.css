@@ -305,8 +305,8 @@ p {
   text-align: left;
 }
 
-.tools__list2,
-.etc__list2 {
+.tools__list li,
+.etc__list li {
   margin: 10px;
 }
 /* Works */
@@ -356,8 +356,12 @@ p {
   transform: translateY(0px);
 }
 
-.project__description h3 {
+.project__description span {
   color: var(--color-white);
+}
+
+.project__description h3 {
+  color: var(--color-blue);
 }
 
 .project__description h3:after {
