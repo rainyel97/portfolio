@@ -318,10 +318,10 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 280px;
+  width: 380px;
   height: 250px;
   margin: 2px;
-  background-color: var(--color-light-white);
+  background-color: var(--color-dark-white);
 }
 
 .project__img {
@@ -346,7 +346,7 @@ p {
 }
 
 .project:hover .project__description {
-  opacity: 0.8;
+  opacity: 1;
   transform: translateY(0px);
 }
 
