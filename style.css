@@ -290,6 +290,7 @@ p {
 }
 
 .tools {
+  height: 50%;
   background-color: var(--color-grey);
 }
 
@@ -302,6 +303,11 @@ p {
 .etc__list {
   padding-top: 10px;
   text-align: left;
+}
+
+.tools__list2,
+.etc__list2 {
+  margin: 10px;
 }
 /* Works */
 #work {

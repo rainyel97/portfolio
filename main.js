@@ -65,27 +65,27 @@ function scrollMenubarClick() {
   navbarHome.addEventListener("click", () => {
     console.log("clicked");
     const scrollTo = document.querySelector("#home");
-    scrollTo.scrollIntoView({ behavior: "smooth" });
+    scrollTo.scrollIntoView({ behavior: "smooth", block: "nearest" });
   });
   navbarAbout.addEventListener("click", () => {
     console.log("clicked");
     const scrollTo = document.querySelector("#about");
-    scrollTo.scrollIntoView({ behavior: "smooth" });
+    scrollTo.scrollIntoView({ behavior: "smooth", block: "center" });
   });
   navbarSkills.addEventListener("click", () => {
     console.log("clicked");
     const scrollTo = document.querySelector("#skills");
-    scrollTo.scrollIntoView({ behavior: "smooth" });
+    scrollTo.scrollIntoView({ behavior: "smooth", block: "center" });
   });
   navbarWork.addEventListener("click", () => {
     console.log("clicked");
     const scrollTo = document.querySelector("#work");
-    scrollTo.scrollIntoView({ behavior: "smooth" });
+    scrollTo.scrollIntoView({ behavior: "smooth", block: "center" });
   });
   navbarContact.addEventListener("click", () => {
     console.log("clicked");
     const scrollTo = document.querySelector("#contact");
-    scrollTo.scrollIntoView({ behavior: "smooth" });
+    scrollTo.scrollIntoView({ behavior: "smooth", block: "center" });
   });
 }
 // arrowUp Button eventListener
