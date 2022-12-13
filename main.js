@@ -37,14 +37,14 @@ function scrollMenubarBorder() {
       navbarWork.classList.remove("active");
       navbarContact.classList.remove("active");
       arrowUp.classList.add("show");
-    } else if (window.scrollY >= 1171 && window.scrollY <= 1870) {
+    } else if (window.scrollY >= 1171 && window.scrollY <= 1670) {
       navbarHome.classList.remove("active");
       navbarAbout.classList.remove("active");
       navbarSkills.classList.add("active");
       navbarWork.classList.remove("active");
       navbarContact.classList.remove("active");
       arrowUp.classList.add("show");
-    } else if (window.scrollY >= 1871 && window.scrollY <= 2200) {
+    } else if (window.scrollY >= 1671 && window.scrollY <= 2150) {
       navbarHome.classList.remove("active");
       navbarAbout.classList.remove("active");
       navbarSkills.classList.remove("active");
