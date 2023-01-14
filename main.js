@@ -30,21 +30,21 @@ function scrollMenubarBorder() {
       navbarWork.classList.remove("active");
       navbarContact.classList.remove("active");
       arrowUp.classList.remove("show");
-    } else if (window.scrollY >= 451 && window.scrollY <= 1170) {
+    } else if (window.scrollY >= 451 && window.scrollY <= 1070) {
       navbarHome.classList.remove("active");
       navbarAbout.classList.add("active");
       navbarSkills.classList.remove("active");
       navbarWork.classList.remove("active");
       navbarContact.classList.remove("active");
       arrowUp.classList.add("show");
-    } else if (window.scrollY >= 1171 && window.scrollY <= 1670) {
+    } else if (window.scrollY >= 1071 && window.scrollY <= 1700) {
       navbarHome.classList.remove("active");
       navbarAbout.classList.remove("active");
       navbarSkills.classList.add("active");
       navbarWork.classList.remove("active");
       navbarContact.classList.remove("active");
       arrowUp.classList.add("show");
-    } else if (window.scrollY >= 1671 && window.scrollY <= 2150) {
+    } else if (window.scrollY >= 1701 && window.scrollY <= 2150) {
       navbarHome.classList.remove("active");
       navbarAbout.classList.remove("active");
       navbarSkills.classList.remove("active");
