@@ -145,26 +145,6 @@ p {
   border: 2px solid var(--color-light-white);
 }
 
-.home__title,
-.home__description {
-  color: var(--color-white);
-}
-
-.home__contact {
-  color: var(--color-white);
-  background-color: black;
-  font-size: var(--font-regular);
-  font-weight: var(--weight-bold);
-  margin: 24px;
-  padding: 8px 12px;
-  border: 2px solid var(--color-white);
-  border-radius: 10px;
-}
-
-.home__contact:hover {
-  background-color: darkgrey;
-  transition: all 300ms;
-}
 /* Section common */
 .section {
   padding: 50px;
@@ -309,6 +289,7 @@ p {
 .etc__list li {
   margin: 10px;
 }
+
 /* Works */
 #work {
   padding: 100px;
@@ -319,6 +300,15 @@ p {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.works__project-title {
+  color: var(--color-orange);
+}
+
+.works__project-tech {
+  color: var(--color-light-white);
+}
+
 .project {
   position: relative;
   display: flex;
@@ -326,7 +316,7 @@ p {
   align-items: center;
   width: 380px;
   height: 250px;
-  margin: 2px;
+  margin: 10px;
   background-color: var(--color-dark-white);
 }
 
@@ -357,7 +347,7 @@ p {
 }
 
 .project__description span {
-  color: var(--color-white);
+  padding: 5px;
 }
 
 .project__description h3 {
