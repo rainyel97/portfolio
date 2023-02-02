@@ -231,63 +231,38 @@ p {
 
 .skillset {
   display: flex;
+  width: 100%;
+  height: 500px;
   background-color: var(--color-light-grey);
-  color: var(--color-light-white);
   margin: 20px 0;
 }
 
 .skillset__title {
-  color: var(--color-white);
-}
-.skillset__left {
-  flex-basis: 60%;
-  background-color: var(--color-dark-grey);
-  padding: 20px 40px;
+  flex-basis: 20%;
+  color: var(--color-light-white);
+  padding: 30px;
 }
 
-.skill {
-  margin-bottom: 32px;
-}
-.skill__description {
+.languages {
   display: flex;
-  padding-bottom: 5px;
-  justify-content: space-between;
+  flex-direction: column;
+  flex-basis: 50%;
+  border-right: 2px solid var(--color-dark-white);
 }
 
-.skill__bar {
-  width: 100%;
-  height: 3px;
-  background-color: var(--color-grey);
+.librarys {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
 }
 
-.skill__value {
-  height: 2px;
-  background-color: var(--color-orange);
-}
-
-.skillset__right {
-  flex-basis: 40%;
-}
-
-.tools {
-  height: 50%;
-  background-color: var(--color-grey);
-}
-
-.tools,
-.etc {
-  padding: 20px;
-}
-
-.tools__list,
-.etc__list {
-  padding-top: 10px;
-  text-align: left;
-}
-
-.tools__list li,
-.etc__list li {
-  margin: 10px;
+.skills__container {
+  flex-basis: 80%;
+  display: grid;
+  height: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
 }
 
 /* Works */
