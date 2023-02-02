@@ -162,9 +162,10 @@ p {
 #about {
   background: url("img/aboutme.png") center/cover no-repeat;
 }
+
 .about__majors {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 80px 0;
 }
 
@@ -232,34 +233,29 @@ p {
 .skillset {
   display: flex;
   width: 100%;
-  height: 500px;
+  min-height: 500px;
   background-color: var(--color-light-grey);
   margin: 20px 0;
+  border: 2px solid var(--color-dark-white);
 }
 
 .skillset__title {
   flex-basis: 20%;
-  color: var(--color-light-white);
+  color: var(--color-white);
   padding: 30px;
 }
 
-.languages {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 50%;
-  border-right: 2px solid var(--color-dark-white);
-}
-
+.languages,
 .librarys {
   display: flex;
   flex-direction: column;
   flex-basis: 50%;
+  border: 1px solid var(--color-white);
 }
 
 .skills__container {
   flex-basis: 80%;
   display: grid;
-  height: auto;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 20px;
