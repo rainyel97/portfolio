@@ -12,7 +12,15 @@ const navbarContact = document.querySelector(".navbar__menu__item:last-child");
 const arrowUp = document.querySelector(".arrow-up");
 const toggleBtn = document.querySelector(".navbar__toggle-btn");
 const navbarMenu = document.querySelector(".navbar__menu");
-//
+// To eventListener of Icon Animations
+
+const majorIcons = document.querySelectorAll(".major__icon");
+const aboutJobs = document.querySelector(".about__jobs");
+
+const skillsIcons = document.querySelectorAll(".skills__list");
+
+const project = document.querySelectorAll(".project");
+
 function scrollMenubarBorder() {
   document.addEventListener("scroll", () => {
     console.log(window.scrollY);
@@ -37,6 +45,12 @@ function scrollMenubarBorder() {
       navbarWork.classList.remove("active");
       navbarContact.classList.remove("active");
       arrowUp.classList.add("show");
+      majorIcons.forEach((data) => {
+        data.classList.add("animated");
+        data.classList.remove("hidden");
+      });
+      aboutJobs.classList.add("animated");
+      aboutJobs.classList.remove("hidden");
     } else if (window.scrollY >= 1071 && window.scrollY <= 1700) {
       navbarHome.classList.remove("active");
       navbarAbout.classList.remove("active");
@@ -44,6 +58,10 @@ function scrollMenubarBorder() {
       navbarWork.classList.remove("active");
       navbarContact.classList.remove("active");
       arrowUp.classList.add("show");
+      skillsIcons.forEach((data) => {
+        data.classList.add("animated");
+        data.classList.remove("hidden");
+      });
     } else if (window.scrollY >= 1701 && window.scrollY <= 2150) {
       navbarHome.classList.remove("active");
       navbarAbout.classList.remove("active");
@@ -51,6 +69,10 @@ function scrollMenubarBorder() {
       navbarWork.classList.add("active");
       navbarContact.classList.remove("active");
       arrowUp.classList.add("show");
+      project.forEach((data) => {
+        data.classList.add("animated");
+        data.classList.remove("hidden");
+      });
     } else {
       navbarHome.classList.remove("active");
       navbarAbout.classList.remove("active");
