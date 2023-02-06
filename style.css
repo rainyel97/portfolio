@@ -181,12 +181,11 @@ p {
   margin-bottom: 16px;
 }
 
-.major__icon i {
+.major__icon__img {
   transition: all 300ms ease;
 }
 
-.major__icon:hover i {
-  color: rgb(32, 32, 66);
+.major__icon__img:hover {
   transform: scale(1.1);
 }
 
