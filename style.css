@@ -135,9 +135,11 @@ p {
   padding: 40px;
   text-align: center;
 }
+
 .home__container {
   padding-top: 100px;
 }
+
 .home__avatar {
   width: 250px;
   height: 250px;
@@ -193,11 +195,13 @@ p {
 .major__description {
   color: var(--color-black);
 }
+
 .major__title {
   font-weight: var(--weight-bold);
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 .major__description {
   font-size: var(--font-small);
 }
@@ -206,9 +210,11 @@ p {
   display: flex;
   align-items: left;
 }
+
 .job__image {
   margin-right: 20px;
 }
+
 .job__description {
   margin: 0 16px;
   text-align: left;
@@ -346,10 +352,12 @@ p {
 .contact__rights {
   color: deeppink;
 }
+
 .contact__email,
 .contact__rights {
   font-weight: var(--weight-bold);
 }
+
 .contact__title {
   margin: 42px 0;
 }
@@ -364,6 +372,7 @@ p {
   transform: scale(1.1);
   color: var(--color-black);
 }
+
 /* arrowUp */
 .arrow-up {
   position: fixed;
@@ -391,12 +400,10 @@ p {
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
   100% {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
   }
 }
@@ -412,6 +419,7 @@ p {
 .hidden {
   visibility: hidden;
 }
+
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
@@ -430,9 +438,11 @@ p {
     width: 100%;
     display: none;
   }
+
   .navbar__menu.open {
     display: block;
   }
+
   .about__majors {
     flex-direction: column;
   }
