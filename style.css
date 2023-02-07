@@ -93,6 +93,7 @@ p {
 .navbar__menu {
   display: flex;
 }
+
 #navbar.navbar__colorize {
   color: var(--color-white);
   background-color: rgb(33, 37, 41);

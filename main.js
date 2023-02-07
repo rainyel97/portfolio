@@ -12,20 +12,26 @@ const navbarContact = document.querySelector(".navbar__menu__item:last-child");
 const arrowUp = document.querySelector(".arrow-up");
 const toggleBtn = document.querySelector(".navbar__toggle-btn");
 const navbarMenu = document.querySelector(".navbar__menu");
+
 // To eventListener of Icon Animations
 
-const majorIcons = document.querySelectorAll(".major__icon");
-const aboutJobs = document.querySelector(".about__jobs");
+const ioAnimation = document.querySelectorAll(".hidden");
 
-const skillsIcons = document.querySelectorAll(".skills__list");
+const io = new IntersectionObserver((e) => {
+  e.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.remove("hidden");
+      entry.target.classList.add("animated");
+    }
+  });
+});
 
-const project = document.querySelectorAll(".project");
+ioAnimation.forEach((element) => io.observe(element));
+
+//Js functions
 
 function scrollMenubarBorder() {
   document.addEventListener("scroll", () => {
-    console.log(window.scrollY);
-    console.log(navbarHeight);
-    console.log(window.innerWidth);
     if (window.scrollY > navbarHeight && window.innerWidth > 768) {
       navbar.classList.add("navbar__colorize");
     } else {
@@ -45,12 +51,6 @@ function scrollMenubarBorder() {
       navbarWork.classList.remove("active");
       navbarContact.classList.remove("active");
       arrowUp.classList.add("show");
-      majorIcons.forEach((data) => {
-        data.classList.add("animated");
-        data.classList.remove("hidden");
-      });
-      aboutJobs.classList.add("animated");
-      aboutJobs.classList.remove("hidden");
     } else if (window.scrollY >= 1071 && window.scrollY <= 1700) {
       navbarHome.classList.remove("active");
       navbarAbout.classList.remove("active");
@@ -58,10 +58,6 @@ function scrollMenubarBorder() {
       navbarWork.classList.remove("active");
       navbarContact.classList.remove("active");
       arrowUp.classList.add("show");
-      skillsIcons.forEach((data) => {
-        data.classList.add("animated");
-        data.classList.remove("hidden");
-      });
     } else if (window.scrollY >= 1701 && window.scrollY <= 2150) {
       navbarHome.classList.remove("active");
       navbarAbout.classList.remove("active");
@@ -69,10 +65,6 @@ function scrollMenubarBorder() {
       navbarWork.classList.add("active");
       navbarContact.classList.remove("active");
       arrowUp.classList.add("show");
-      project.forEach((data) => {
-        data.classList.add("animated");
-        data.classList.remove("hidden");
-      });
     } else {
       navbarHome.classList.remove("active");
       navbarAbout.classList.remove("active");
@@ -83,6 +75,7 @@ function scrollMenubarBorder() {
     }
   });
 }
+
 function scrollMenubarClick() {
   navbarHome.addEventListener("click", () => {
     console.log("clicked");
@@ -110,19 +103,11 @@ function scrollMenubarClick() {
     scrollTo.scrollIntoView({ behavior: "smooth", block: "center" });
   });
 }
-// arrowUp Button eventListener
+
 function arrowUpButton() {
   arrowUp.addEventListener("click", () => {
     const scrollTo = document.querySelector("#home");
     scrollTo.scrollIntoView({ behavior: "smooth" });
-  });
-}
-
-function homeOpacity() {
-  const home = document.querySelector(".home__container");
-  const homeHeight = home.getBoundingClientRect().height;
-  document.addEventListener("scroll", () => {
-    home.style.opacity = 1 - window.scrollY / homeHeight;
   });
 }
 
@@ -135,5 +120,4 @@ function showMenubarFromToggle() {
 scrollMenubarBorder();
 scrollMenubarClick();
 arrowUpButton();
-//homeOpacity();
 showMenubarFromToggle();
